@@ -7,4 +7,9 @@
     <RootNamespace>Realtidskommunikation_Projekt</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
+  </ItemGroup>
+
 </Project>
