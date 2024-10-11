@@ -573,11 +573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yonis\\Source\\Repos\\Realtidskommunikation-Projekt\\Realtidskommunikation Projekt\\Realtidskommunikation Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation Projekt\\Realtidskommunikation Projekt.csproj",
       "projectName": "Realtidskommunikation Projekt",
-      "projectPath": "C:\\Users\\yonis\\Source\\Repos\\Realtidskommunikation-Projekt\\Realtidskommunikation Projekt\\Realtidskommunikation Projekt.csproj",
+      "projectPath": "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation Projekt\\Realtidskommunikation Projekt.csproj",
       "packagesPath": "C:\\Users\\yonis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yonis\\Source\\Repos\\Realtidskommunikation-Projekt\\Realtidskommunikation Projekt\\obj\\",
+      "outputPath": "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yonis\\AppData\\Roaming\\NuGet\\NuGet.Config",
