@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yonis\\source\\repos\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj": {}
+    "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yonis\\source\\repos\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj": {
+    "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yonis\\source\\repos\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj",
+        "projectUniqueName": "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj",
         "projectName": "Realtidskommunikation KlientSida",
-        "projectPath": "C:\\Users\\yonis\\source\\repos\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj",
+        "projectPath": "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida.csproj",
         "packagesPath": "C:\\Users\\yonis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yonis\\source\\repos\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\obj\\",
+        "outputPath": "C:\\Users\\yonis\\OneDrive\\Skrivbord\\Realtidskommunikation-Projekt\\Realtidskommunikation KlientSida\\Realtidskommunikation KlientSida\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yonis\\AppData\\Roaming\\NuGet\\NuGet.Config",

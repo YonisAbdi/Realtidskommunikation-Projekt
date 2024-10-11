@@ -1,12 +1,23 @@
-﻿using System.Net.WebSockets;
+﻿using System;
+using System.Net.WebSockets;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 var ws = new ClientWebSocket();
 
+string name;
+while (true)
+{
+    Console.Write("Ange namn: ");
+    name = Console.ReadLine();
+    break;
+}
 
 Console.WriteLine("Connecting to server");
-await ws.ConnectAsync(new Uri("ws://localhost:6969/ws"), CancellationToken.None);
+await ws.ConnectAsync(new Uri("ws://localhost:6969/ws?name={name}"), CancellationToken.None);
 Console.WriteLine("Connected!");
+
 
 var receiveTask = Task.Run(async () =>
 {
@@ -20,9 +31,32 @@ var receiveTask = Task.Run(async () =>
         }
 
         var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
-        Console.WriteLine("Recevied " + message);
+        Console.WriteLine("Received " + message);
     }
-    
 });
 
-await receiveTask;
+
+var sendTask = Task.Run(async () =>
+{
+    while (true)
+    {
+        var message = Console.ReadLine();
+        if (message == "exit")
+        {
+            break;
+        }
+        var bytes = Encoding.UTF8.GetBytes(message);
+        await ws.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
+    }
+});
+
+
+await Task.WhenAny(receiveTask, sendTask);
+
+
+if (ws.State != WebSocketState.Closed)
+{
+    await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);
+}
+
+await Task.WhenAll(receiveTask, sendTask); 
