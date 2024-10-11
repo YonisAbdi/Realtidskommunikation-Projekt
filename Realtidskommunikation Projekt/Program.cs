@@ -14,8 +14,8 @@ app.MapGet("/ws", async context => {
         using var ws = await context.WebSockets.AcceptWebSocketAsync();
         connections.Add(ws);
         var curName = context.Request.Query["name"];
-        await Broadcast($"{curName} har gått med i rummet");
-        await Broadcast($"{connections.Count} användaren i rummet");
+        await Broadcast($"{curName} har gÃ¥tt med i rummet");
+        await Broadcast($"{connections.Count} anvÃ¤ndaren i rummet");
         await ReceiveMessage(ws, async (result, buffer) =>
         {
             if(result.MessageType == WebSocketMessageType.Text)
@@ -26,8 +26,8 @@ app.MapGet("/ws", async context => {
             else if(result.MessageType == WebSocketMessageType.Close || ws.State == WebSocketState.Aborted)
             {
                 connections.Remove(ws);
-                await Broadcast($"{curName} har lämnat rummet´");
-                await Broadcast($"{connections.Count} användaren i rummet");
+                await Broadcast($"{curName} har lÃ¤mnat rummetÂ´");
+                await Broadcast($"{connections.Count} anvÃ¤ndaren i rummet");
                 await ws.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
             }
         });
@@ -45,12 +45,12 @@ app.MapGet("/ws", async context => {
                 break;
             }
             Thread.Sleep(1000);
-        }
+        }*/
     }
     else
     {
         context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-    }*/
+    }
 });
 
 async Task Broadcast(string message)
