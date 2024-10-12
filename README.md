@@ -6,3 +6,6 @@ UseCase-diagram:
 
 Wireframe-Chatttjänst
 ![Wireframe-Chatttjänst](https://github.com/user-attachments/assets/c1437f49-8f8e-4e8b-abf2-6057cc4154cd)
+
+Vädertjänst
+![Wireframe-Vädertjänst](https://github.com/user-attachments/assets/8d5c55ef-37b8-468a-9a5c-2d1134aaa03c)
