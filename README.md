@@ -1,4 +1,6 @@
 Naturliga Växter & Kreativa Trädgårdar - Projektbeskrivning
+
+
 I det här projektet ska vi hjälpa Åsa Kringla och hennes företag, Naturliga Växter & Kreativa Trädgårdar, att bli mer effektiva genom en ny webbapplikation. Fokus ligger på att förbättra kommunikationen med kunder och ge företaget realtidsinformation om vädret, som är avgörande för deras växthusverksamhet.
 
 Vad jag ska bygga
