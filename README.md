@@ -1,3 +1,18 @@
+Naturliga Växter & Kreativa Trädgårdar - Projektbeskrivning
+I det här projektet ska vi hjälpa Åsa Kringla och hennes företag, Naturliga Växter & Kreativa Trädgårdar, att bli mer effektiva genom en ny webbapplikation. Fokus ligger på att förbättra kommunikationen med kunder och ge företaget realtidsinformation om vädret, som är avgörande för deras växthusverksamhet.
+
+Vad jag ska bygga
+Efter att ha diskuterat med Åsa och analyserat företagets behov har jag valt att implementera två huvudsakliga funktioner:
+
+1. Chattjänst för direktkontakt med kunder
+Företaget behöver ett sätt att snabbt och enkelt kommunicera med sina kunder. Genom en chattfunktion kan Åsa och hennes medarbetare svara på frågor och erbjuda rådgivning i realtid. Jag kommer att använda SignalR för att bygga chatten, så att meddelanden skickas omedelbart mellan kund och medarbetare, vilket skapar en smidigare och mer personlig upplevelse.
+
+2. Väderprognos i realtid
+Att ha koll på vädret är superviktigt för Åsa och hennes växthus. Jag kommer att integrera ett väder-API (t.ex. OpenWeatherMap) som visar realtidsprognoser direkt i appen. Detta gör att Åsa kan se vad som väntar och planera om hon behöver öppna fönstren i växthuset eller starta vattningssystemet. Den här funktionen kommer att göra växthusdriften mer effektiv och förhindra skador på plantorna på grund av oväntat väder.
+
+Hur jag bygger det?
+Applikationen kommer att ha en backend byggd med ASP.NET Core och SignalR för chatten. Frontend-gränssnittet kommer att byggas med ett JavaScript-ramverk, troligen Vue.js, för att göra det enkelt att använda både för Åsa och kunderna. För väderprognosen använder jag ett väder-API som integreras i applikationen för att visa aktuell väderinformation i realtid.
+
 
 Kanban-Brädan:
 ![Kanban-Brädan](https://github.com/user-attachments/assets/e3bf4f5b-65ed-4737-954f-440462418001)
