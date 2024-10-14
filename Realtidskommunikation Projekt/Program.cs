@@ -45,12 +45,12 @@ app.MapGet("/ws", async context => {
                 break;
             }
             Thread.Sleep(1000);
-        }
+        }*/
     }
     else
     {
         context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-    }*/
+    }
 });
 
 async Task Broadcast(string message)

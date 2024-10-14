@@ -1,0 +1,26 @@
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.AssemblyInfoInputs.cache
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.AssemblyInfo.cs
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.csproj.CoreCompileInputs.cache
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.sourcelink.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\appsettings.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\Realtidskommunikation Projekt.exe
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\Realtidskommunikation Projekt.deps.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\Realtidskommunikation Projekt.runtimeconfig.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\Realtidskommunikation Projekt.dll
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\Realtidskommunikation Projekt.pdb
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets\msbuild.Realtidskommunikation Projekt.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets\msbuild.build.Realtidskommunikation Projekt.props
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Realtidskommunikation Projekt.props
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Realtidskommunikation Projekt.props
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\scopedcss\bundle\Realtidskommunikation Projekt.styles.css
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.dll
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\refint\Realtidskommunikation Projekt.dll
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.pdb
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.genruntimeconfig.cache
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\ref\Realtidskommunikation Projekt.dll
