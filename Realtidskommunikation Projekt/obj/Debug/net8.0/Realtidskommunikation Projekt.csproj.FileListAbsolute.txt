@@ -24,3 +24,7 @@ C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunik
 C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.pdb
 C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.genruntimeconfig.cache
 C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\ref\Realtidskommunikation Projekt.dll
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtidskommunikation Projekt.csproj.AssemblyReference.cache
+C:\Users\yonis\OneDrive\Skrivbord\Realtidskommunikation-Projekt\Realtidskommunikation Projekt\obj\Debug\net8.0\Realtids.F2CE432A.Up2Date

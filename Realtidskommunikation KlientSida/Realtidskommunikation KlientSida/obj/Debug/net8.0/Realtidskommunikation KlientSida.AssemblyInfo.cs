@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Realtidskommunikation KlientSida")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+703f8b23a59b57e833a27c3ea633a9c9c80d3d82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e78b7ed078cabeb4b1dddebb8a95b2f939a2d025")]
 [assembly: System.Reflection.AssemblyProductAttribute("Realtidskommunikation KlientSida")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Realtidskommunikation KlientSida")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
