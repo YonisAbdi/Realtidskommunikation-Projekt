@@ -1,20 +1,18 @@
 <template>
     <div id="app">
-        <ChatComponent /> 
+        <nav>
+            <router-link to="/chat">Chat Room</router-link>
+            <router-link to="/weather">Weather Forecast</router-link>
+        </nav>
+        <router-view />
     </div>
 </template>
 
 <script>
-    import ChatComponent from './components/ChatComponent.vue'; // Make sure this matches the correct file name
-
     export default {
         name: 'App',
-        components: {
-            ChatComponent // Correct name here
-        }
-    }
+    };
 </script>
-
 
 <style>
     #app {
@@ -25,4 +23,18 @@
         color: #2c3e50;
         margin-top: 60px;
     }
+
+    nav {
+        margin-bottom: 20px;
+    }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #42b983;
+        }
+
+            nav a.router-link-exact-active {
+                font-weight: bold;
+            }
 </style>

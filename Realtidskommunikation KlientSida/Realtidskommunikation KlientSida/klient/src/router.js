@@ -1,7 +1,6 @@
-﻿// src/router.js
-import { createRouter, createWebHistory } from 'vue-router';
+﻿import { createRouter, createWebHistory } from 'vue-router';
 import ChatComponent from './components/ChatComponent.vue';
-import WeatherComponent from './components/WeatherComponent.vue';
+import WeatherComponent from './components/WeatherComponent.vue'; 
 
 const routes = [
     {
@@ -13,10 +12,6 @@ const routes = [
         path: '/weather',
         name: 'Weather',
         component: WeatherComponent,
-    },
-    {
-        path: '/',
-        redirect: '/chat',
     },
 ];
 
