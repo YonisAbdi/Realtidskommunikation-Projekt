@@ -8,4 +8,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="klient\src\components\WeatherComponent.vue" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="klient\src\components\WeatherComponent.vue" />
+  </ItemGroup>
+
 </Project>
