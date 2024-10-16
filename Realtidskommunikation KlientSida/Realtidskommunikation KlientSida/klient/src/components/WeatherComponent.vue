@@ -96,9 +96,9 @@ export default {
 <style scoped>
 .weather-container {
   background-color: #92D050;
-  padding: 20px;
+  padding: 50px;
   border-radius: 10px;
-  width: 400px;
+  width: 700PX;
   margin: 0 auto;
   font-family: Arial, sans-serif;
   color: black;
@@ -106,12 +106,15 @@ export default {
 
 .weather-header {
   text-align: center;
+  
 }
 
 .weather-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 20px;
+  margin-right: 100px;
+  
 }
 
 .weather-item {
@@ -119,9 +122,12 @@ export default {
 }
 
 .current-weather {
-  text-align: center;
+  text-align: right;
   margin-bottom: 20px;
+  margin-top: -200px; /* This will move it upwards */
+  position: relative;
 }
+
 
 .buttons {
   text-align: center;
