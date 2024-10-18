@@ -22,15 +22,21 @@
       <p>{{ currentTime }}</p>
     </div>
 
-    <!-- Control buttons -->
+    <!-- Display window status -->
+    <div class="window-status">
+      <h2>Fönsterstatus: {{ isWindowOpen ? 'Öppet' : 'Stängt' }}</h2>
+    </div>
+
+    <!-- Control buttons for window -->
     <div class="buttons">
-      <button @click="openWindow">Öppna Fönstret</button>
-      <button @click="closeWindow">Stäng Fönstret</button>
+      <button @click="toggleWindow">{{ isWindowOpen ? 'Stäng Fönstret' : 'Öppna Fönstret' }}</button>
     </div>
   </div>
 </template>
 
 <script>
+import { HubConnectionBuilder } from '@microsoft/signalr';
+
 export default {
   data() {
     return {
@@ -39,14 +45,33 @@ export default {
       city: 'Jönköping', // City name
       currentTime: new Date().toLocaleTimeString(), // Local time
       apiKey: 'b0eb5944fbf94961aaf80621241610', // Your WeatherAPI key
+      isWindowOpen: false, // Window status
+      windowHubConnection: null // SignalR connection for window control
     };
   },
   mounted() {
+    // Fetch weather and set up auto-refresh
     this.fetchWeather();
     setInterval(() => {
-      this.fetchWeather(); // Auto-refresh the weather data every hour
+      this.fetchWeather();
       this.currentTime = new Date().toLocaleTimeString();
     }, 60000); // Update time and refresh weather data every minute
+
+    // Initialize SignalR connection for window control
+    this.windowHubConnection = new HubConnectionBuilder()
+      .withUrl('http://localhost:5027/windowHub')
+      .build();
+
+    // Start SignalR connection and handle window status updates
+    this.windowHubConnection.start().then(() => {
+      // Handle window status when received from the server
+      this.windowHubConnection.on('ReceiveWindowStatus', (status) => {
+        this.isWindowOpen = status;
+      });
+
+      // Request the current window status from the server
+      this.windowHubConnection.invoke('GetWindowStatus');
+    }).catch(error => console.error('SignalR connection error:', error));
   },
   methods: {
     async fetchWeather() {
@@ -57,13 +82,13 @@ export default {
         const data = await response.json();
 
         const currentHour = new Date().getHours();
-        const nextHour = (currentHour + 1) % 24; // Get the next full hour
+        const nextHour = (currentHour + 1) % 24;
         const forecastHours = data.forecast.forecastday[0].hour.filter(hour => {
           const forecastHour = new Date(hour.time).getHours();
           return forecastHour >= nextHour;
         });
 
-        // Process the forecast data to start from the next hour, displaying 5 intervals every hour
+        // Process the forecast data to start from the next hour
         this.forecast = forecastHours.slice(0, 5).map(hour => ({
           time: hour.time,
           temp: hour.temp_c,
@@ -83,11 +108,11 @@ export default {
       const date = new Date(time);
       return date.getHours() + ':00';
     },
-    openWindow() {
-      console.log('Window opened!');
-    },
-    closeWindow() {
-      console.log('Window closed!');
+    toggleWindow() {
+      // Toggle window status and send the updated status to the server
+      this.isWindowOpen = !this.isWindowOpen;
+      this.windowHubConnection.invoke('ToggleWindow', this.isWindowOpen)
+        .catch(error => console.error('SignalR invoke error:', error));
     }
   }
 };
@@ -98,7 +123,7 @@ export default {
   background-color: #92D050;
   padding: 50px;
   border-radius: 10px;
-  width: 700PX;
+  width: 700px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
   color: black;
@@ -106,7 +131,6 @@ export default {
 
 .weather-header {
   text-align: center;
-  
 }
 
 .weather-grid {
@@ -114,7 +138,6 @@ export default {
   justify-content: space-evenly;
   margin-bottom: 20px;
   margin-right: 100px;
-  
 }
 
 .weather-item {
@@ -124,10 +147,15 @@ export default {
 .current-weather {
   text-align: right;
   margin-bottom: 20px;
-  margin-top: -200px; /* This will move it upwards */
+  margin-top: -200px;
   position: relative;
 }
 
+.window-status {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
 .buttons {
   text-align: center;

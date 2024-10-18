@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Realtidskommunikation Projekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7bee2750c5a2b6d44330ab96257b2bb461fb544")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b6e0e9bfd0044894e6b7a98a9a2a5282db21ebd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Realtidskommunikation Projekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Realtidskommunikation Projekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

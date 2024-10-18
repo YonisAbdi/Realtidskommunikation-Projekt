@@ -14,7 +14,8 @@
         <div class="input-area">
             <input v-model="username" placeholder="Enter your name" />
             <input v-model="role" placeholder="Enter your role (admin/klient)" />
-            <input v-model="message" placeholder="Enter your message" />
+            <!-- Trigger sendMessage when 'Enter' key is pressed -->
+            <input v-model="message" @keyup.enter="sendMessage" placeholder="Enter your message" />
             <button @click="sendMessage">Send Message</button>
         </div>
     </div>
@@ -32,7 +33,7 @@
                 message: '',
                 username: '',
                 role: '',
-                currentRole: '',
+                currentRole: '', // Keeps track of the current user role
             };
         },
         mounted() {
@@ -51,21 +52,18 @@
                 })
                 .catch(err => console.error("Connection error: ", err));
         },
-
         methods: {
             sendMessage() {
                 if (this.message && this.username && this.role) {
                     const timestamp = new Date().toLocaleTimeString();
 
-
                     if (!this.currentRole) {
                         this.currentRole = this.role;
                     }
 
-
                     this.connection.invoke("SendMessage", this.username, this.role, this.message, timestamp)
                         .then(() => {
-                            this.message = '';
+                            this.message = ''; // Clear the message after sending
                         })
                         .catch(err => console.error("Error sending message: ", err));
                 }
@@ -75,7 +73,6 @@
 </script>
 
 <style scoped>
-
     .chat-window {
         width: 100%;
         height: 300px;
@@ -123,5 +120,4 @@
         display: block;
         margin-top: 3px;
     }
-
 </style>
