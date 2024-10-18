@@ -24,4 +24,6 @@ app.UseCors("AllowVueApp");
 
 app.MapHub<ChattHub>("/chatHub");
 
+app.MapHub<WindowHub>("/windowhub");
+
 await app.RunAsync();
