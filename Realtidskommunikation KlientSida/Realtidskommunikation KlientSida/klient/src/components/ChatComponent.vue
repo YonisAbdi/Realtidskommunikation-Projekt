@@ -11,10 +11,15 @@
             </div>
         </div>
 
-        <div class="input-area">
+        <!-- Show username and role input only if the user hasn't identified themselves -->
+        <div v-if="!isIdentified" class="identification-area">
             <input v-model="username" placeholder="Enter your name" />
             <input v-model="role" placeholder="Enter your role (admin/klient)" />
-            <!-- Trigger sendMessage when 'Enter' key is pressed -->
+            <button @click="identifyUser">Identify</button>
+        </div>
+
+        <!-- Show the message input field only after the user has identified themselves -->
+        <div v-else class="input-area">
             <input v-model="message" @keyup.enter="sendMessage" placeholder="Enter your message" />
             <button @click="sendMessage">Send Message</button>
         </div>
@@ -34,6 +39,7 @@
                 username: '',
                 role: '',
                 currentRole: '', // Keeps track of the current user role
+                isIdentified: false // Tracks if the user has provided their name and role
             };
         },
         mounted() {
@@ -53,13 +59,18 @@
                 .catch(err => console.error("Connection error: ", err));
         },
         methods: {
+            // Function to identify the user
+            identifyUser() {
+                if (this.username && this.role) {
+                    this.currentRole = this.role; // Set the role for this user
+                    this.isIdentified = true; // Mark the user as identified
+                } else {
+                    alert('Please enter both your name and role.');
+                }
+            },
             sendMessage() {
-                if (this.message && this.username && this.role) {
+                if (this.message) {
                     const timestamp = new Date().toLocaleTimeString();
-
-                    if (!this.currentRole) {
-                        this.currentRole = this.role;
-                    }
 
                     this.connection.invoke("SendMessage", this.username, this.role, this.message, timestamp)
                         .then(() => {
