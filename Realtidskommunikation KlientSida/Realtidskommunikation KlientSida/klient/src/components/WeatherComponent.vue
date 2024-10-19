@@ -4,7 +4,7 @@
       <h2>Naturliga Växter & Trädgårdar / Väder Prognos</h2>
     </div>
 
-    <!-- Display weather icons and temperatures at hourly intervals starting from the next full hour -->
+    <!-- Display weather icons and temperatures at hourly intervals -->
     <div class="weather-grid">
       <div v-for="(hour, index) in forecast" :key="index" class="weather-item">
         <p>{{ formatTime(hour.time) }}</p>
@@ -19,7 +19,7 @@
       <img :src="current.icon" alt="current weather icon" />
       <p>{{ Math.round(current.temp) }}°C</p>
       <p>{{ city }}</p>
-      <p>{{ currentTime }}</p>
+      <p>{{ currentTime }}</p> <!-- Real-time clock displayed here -->
     </div>
 
     <!-- Display window status -->
@@ -44,7 +44,7 @@ export default {
       current: {},  // Current weather data
       city: 'Jönköping', // City name
       currentTime: new Date().toLocaleTimeString(), // Local time
-      apiKey: 'b0eb5944fbf94961aaf80621241610', // Your WeatherAPI key
+      apiKey: 'b0eb5944fbf94961aaf80621241610', // WeatherAPI key
       isWindowOpen: false, // Window status
       windowHubConnection: null // SignalR connection for window control
     };
@@ -52,23 +52,23 @@ export default {
   mounted() {
     // Fetch weather and set up auto-refresh
     this.fetchWeather();
+    
+    // Set interval to update the current time every second
     setInterval(() => {
       this.fetchWeather();
       this.currentTime = new Date().toLocaleTimeString();
-    }, 60000); // Update time and refresh weather data every minute
+    }, 1000); // Update the time every second
 
     // Initialize SignalR connection for window control
     this.windowHubConnection = new HubConnectionBuilder()
       .withUrl('http://localhost:5027/windowHub')
       .build();
 
-    // Start SignalR connection and handle window status updates
     this.windowHubConnection.start().then(() => {
-      // Handle window status when received from the server
       this.windowHubConnection.on('ReceiveWindowStatus', (status) => {
         this.isWindowOpen = status;
       });
-
+      
       // Request the current window status from the server
       this.windowHubConnection.invoke('GetWindowStatus');
     }).catch(error => console.error('SignalR connection error:', error));
@@ -88,14 +88,12 @@ export default {
           return forecastHour >= nextHour;
         });
 
-        // Process the forecast data to start from the next hour
         this.forecast = forecastHours.slice(0, 5).map(hour => ({
           time: hour.time,
           temp: hour.temp_c,
-          icon: `https:${hour.condition.icon}`, // Fix the icon URL
+          icon: `https:${hour.condition.icon}`,
         }));
 
-        // Set current weather data
         this.current = {
           temp: data.current.temp_c,
           icon: `https:${data.current.condition.icon}`,
@@ -109,7 +107,6 @@ export default {
       return date.getHours() + ':00';
     },
     toggleWindow() {
-      // Toggle window status and send the updated status to the server
       this.isWindowOpen = !this.isWindowOpen;
       this.windowHubConnection.invoke('ToggleWindow', this.isWindowOpen)
         .catch(error => console.error('SignalR invoke error:', error));
@@ -137,7 +134,6 @@ export default {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
-  margin-right: 100px;
 }
 
 .weather-item {
@@ -146,15 +142,11 @@ export default {
 
 .current-weather {
   text-align: right;
-  margin-bottom: 20px;
-  margin-top: -200px;
-  position: relative;
 }
 
 .window-status {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .buttons {

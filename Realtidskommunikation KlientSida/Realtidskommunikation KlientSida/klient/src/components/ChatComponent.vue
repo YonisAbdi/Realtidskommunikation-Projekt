@@ -11,17 +11,20 @@
             </div>
         </div>
 
-        <!-- Show username and role input only if the user hasn't identified themselves -->
         <div v-if="!isIdentified" class="identification-area">
             <input v-model="username" placeholder="Enter your name" />
             <input v-model="role" placeholder="Enter your role (admin/klient)" />
             <button @click="identifyUser">Identify</button>
         </div>
 
-        <!-- Show the message input field only after the user has identified themselves -->
         <div v-else class="input-area">
             <input v-model="message" @keyup.enter="sendMessage" placeholder="Enter your message" />
             <button @click="sendMessage">Send Message</button>
+        </div>
+
+        <!-- Display real-time clock -->
+        <div class="clock">
+            <p>Current time: {{ currentTime }}</p>
         </div>
     </div>
 </template>
@@ -38,8 +41,9 @@
                 message: '',
                 username: '',
                 role: '',
-                currentRole: '', // Keeps track of the current user role
-                isIdentified: false // Tracks if the user has provided their name and role
+                currentRole: '',
+                isIdentified: false,
+                currentTime: '' // New property to store the current time
             };
         },
         mounted() {
@@ -57,13 +61,21 @@
                     });
                 })
                 .catch(err => console.error("Connection error: ", err));
+
+            // Set interval to update the current time every second
+            this.updateTime();
+            setInterval(this.updateTime, 1000);
         },
         methods: {
-            // Function to identify the user
+            // Function to update the current time
+            updateTime() {
+                const now = new Date();
+                this.currentTime = now.toLocaleTimeString();
+            },
             identifyUser() {
                 if (this.username && this.role) {
-                    this.currentRole = this.role; // Set the role for this user
-                    this.isIdentified = true; // Mark the user as identified
+                    this.currentRole = this.role;
+                    this.isIdentified = true;
                 } else {
                     alert('Please enter both your name and role.');
                 }
@@ -130,5 +142,11 @@
         color: #666;
         display: block;
         margin-top: 3px;
+    }
+
+    .clock {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
     }
 </style>
