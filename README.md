@@ -15,9 +15,13 @@ Att ha koll på vädret är superviktigt för Åsa och hennes växthus. Jag komm
 Hur jag bygger det?
 Applikationen kommer att ha en backend byggd med ASP.NET Core och SignalR för chatten. Frontend-gränssnittet kommer att byggas med ett JavaScript-ramverk, troligen Vue.js, för att göra det enkelt att använda både för Åsa och kunderna. För väderprognosen använder jag ett väder-API som integreras i applikationen för att visa aktuell väderinformation i realtid.
 
+Klass-Diagram
+![KlassDiagram](https://github.com/user-attachments/assets/160c6c74-f503-480d-8206-f1578958d2fb)
 
 Kanban-Brädan:
 ![Kanban-Brädan](https://github.com/user-attachments/assets/e3bf4f5b-65ed-4737-954f-440462418001)
+
+
 UseCase-diagram:
 ![UseCase](https://github.com/user-attachments/assets/ef2e3899-3595-45e5-8ae4-b2722286a1da)
 
