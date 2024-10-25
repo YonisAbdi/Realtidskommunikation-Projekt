@@ -18,6 +18,9 @@ Applikationen kommer att ha en backend byggd med ASP.NET Core och SignalR för c
 Klass-Diagram
 ![KlassDiagram](https://github.com/user-attachments/assets/160c6c74-f503-480d-8206-f1578958d2fb)
 
+Klar Kanban-Brädan:
+![image](https://github.com/user-attachments/assets/16b43e79-2eca-47e0-aa5f-2976dc8d8f11)
+
 Uppdaterad Kanban-Brädan:
 ![image](https://github.com/user-attachments/assets/fe24cbb3-3b80-4b8e-b0ad-a241c2824070)
 
