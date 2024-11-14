@@ -15,6 +15,15 @@ Att ha koll på vädret är superviktigt för Åsa och hennes växthus. Jag komm
 Hur jag bygger det?
 Applikationen kommer att ha en backend byggd med ASP.NET Core och SignalR för chatten. Frontend-gränssnittet kommer att byggas med ett JavaScript-ramverk, troligen Vue.js, för att göra det enkelt att använda både för Åsa och kunderna. För väderprognosen använder jag ett väder-API som integreras i applikationen för att visa aktuell väderinformation i realtid.
 
+Intruktioner på hur man startar progammet:
+Starta Microsoft Vs studio 2022 och gå in till Projekt.sln och starta dens https.
+![RealtidsProjekt](https://github.com/user-attachments/assets/76f3ce12-3169-43ac-ac74-d5e143fb35f0)
+Gå sedan in till Realtidskommunikation KLientsidas folder fram tills klient folder. Gå sedan in i det och där uppe skriver du "cmd ." då får du fram cmd konsolen.
+![cmd](https://github.com/user-attachments/assets/cfe78ac4-9bb8-45e5-93f8-bf41da899e03)
+När du har fått fram cmd konsolen och projeketet körs i backgrunden så skriver du "npm install" i cmd. När den har laddads ner så skriver du "npm run serve", då ska du få en localhost8080 i ditt cmd som du kan då kopiera och kör på.
+Om du vill kolla att det går kommunicera med varandra så kan du starta cmd igen på samma sätt och då får du en ny localhost8081.
+
+
 Klass-Diagram
 ![KlassDiagram](https://github.com/user-attachments/assets/160c6c74-f503-480d-8206-f1578958d2fb)
 
